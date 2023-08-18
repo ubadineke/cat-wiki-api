@@ -37,9 +37,9 @@ exports.createCat = async (req, res) => {
     
 };
 
-exports.deleteCat = async(req, res) => {
+exports.deleteById = async(req, res) => {
     try{
-    await Cat.deleteMany()
+    await Cat.findByIdAndDelete(req.params.id)
         res.status(200).json({
             status:'success',
             data: null
@@ -52,12 +52,79 @@ exports.deleteCat = async(req, res) => {
     }
 }
 
-exports.searchCat = (req, res) => {
-    res.status(500).json({
-        status:'error',
-        message:'This route is not yet defined'
-    })
+exports.deleteByBreed = async(req, res) => {
+    try{
+    await Cat.findOneAndDelete(req.params.id)
+        res.status(200).json({
+            status:'success',
+            data: null
+        })
+    } catch (err){
+        res.status(404).json({
+            status:'fail',
+            message: err
+        })
+    }
+}
+
+
+exports.getByBreed = async (req, res) => {
+    try{
+      const cat = await Cat.find({ breed: `${req.params.breed}` })
+    res.status(200).json({
+            status:'success',
+            data:{
+                cat
+            }
+        })
+    } catch (err) {
+        res.status(404).json({
+            status:'fail',
+            message:err
+        })
+    }
+
+    
 };
+
+exports.getById = async (req, res) => {
+    try{
+      const cat = await Cat.findById(req.params.id)
+    res.status(200).json({
+            status:'success',
+            data:{
+                cat
+            }
+        })
+    } catch (err) {
+        res.status(404).json({
+            status:'fail',
+            message:err
+        })
+    }
+
+    
+};
+
+exports.updateById =  async (req, res) => {
+    try{
+        const cat = await Cat.findByIdAndUpdate(req.params.id, req.body, {
+            new: true,
+            runValidators: true
+        })
+        res.status(200).json({
+            status:'success',
+            data:{
+                cat
+            }
+        })
+    } catch (err){
+        res.status(404).json({
+            status:'fail',
+            message: err
+        })
+    }
+}
 
 exports.topfriendly = (req, res) => {
     res.status(500).json({

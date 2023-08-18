@@ -9,11 +9,14 @@ router
 
 router
     .route('/:id')
-    .delete(catController.deleteCat)
+    .get(catController.getById)
+    .delete(catController.deleteById)
+    .patch(catController.updateById)
 
 router
     .route('/:breed')
-    .get(catController.searchCat)
+    .get(catController.getByBreed)
+    .delete(catController.deleteByBreed)
 
 router
     .route('/topfriendly')
