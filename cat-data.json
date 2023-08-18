@@ -1,0 +1,138 @@
+[
+      {
+        "breed": "Siamese",
+        "description": "Siamese cats are known for their striking blue eyes, short coat, and distinctive color points on the ears, face, paws, and tail.",
+        "intelligence": 3,
+        "friendliness": 9,
+        "origin": "Thailand",
+        "weight": "6-14 pounds",
+        "life_span": "12-20 years"
+      },
+      {
+        "breed": "Maine Coon",
+        "description": "Maine Coons are one of the largest domesticated cat breeds. They have a distinctive physical appearance and are known for their friendly and sociable nature.",
+        "intelligence": 4,
+        "friendliness": 10,
+        "origin": "United States",
+        "weight": "10-25 pounds",
+        "life_span": "12-15 years"
+      },
+      {
+        "breed": "Persian",
+        "description": "Persian cats are recognized by their long, luxurious coat and distinctively flat face. They have a calm and gentle personality.",
+        "intelligence": 2,
+        "friendliness": 7,
+        "origin": "Persia (Iran)",
+        "weight": "7-12 pounds",
+        "life_span": "12-16 years"
+      },
+      {
+        "breed": "Ragdoll",
+        "description": "Ragdolls are large, affectionate cats known for their striking blue eyes and tendency to go limp when picked up, hence the name.",
+        "intelligence": 3,
+        "friendliness": 9,
+        "origin": "United States",
+        "weight": "10-20 pounds",
+        "life_span": "12-17 years"
+
+      },
+      {
+        "breed": "Sphynx",
+        "description": "Sphynx cats are hairless and have a distinctive wrinkled skin. They are known for their extroverted and affectionate personality.",
+        "intelligence": 4,
+        "friendliness": 8,
+        "origin": "Canada",
+        "weight": "6-12 pounds",
+        "life_span": "8-14 years"
+    },
+      {
+        "breed": "Bengal",
+        "description": "Bengal cats have a distinctive spotted or marbled coat that resembles that of a wild leopard. They are energetic and playful.",
+        "intelligence": 5,
+        "friendliness": 7,
+        "origin": "United States",
+        "weight": "8-15 pounds",
+        "life_span": "12-16 years"
+      },
+      {
+        "breed": "Scottish Fold",
+        "description": "Scottish Folds are known for their unique folded ears and round faces. They have a sweet and gentle disposition.",
+        "intelligence": 3,
+        "friendliness": 8,
+        "origin": "Scotland",
+        "weight": "6-13 pounds",
+        "life_span": "13-15 years"
+      },
+      {
+        "breed": "Russian Blue",
+        "description": "Russian Blue cats have a short, dense coat of bluish-gray fur and striking green eyes. They are reserved but affectionate.",
+        "intelligence": 4,
+        "friendliness": 8,
+        "origin": "Russia",
+        "weight": "7-12 pounds",
+        "life_span": "15-20 years"
+    },
+      {
+        "breed": "Abyssinian",
+        "description": "Abyssinians are known for their ticked coat and active, playful nature. They are one of the oldest known cat breeds.",
+        "intelligence": 5,
+        "friendliness": 8,
+        "origin": "Egypt",
+        "weight": "6-12 pounds",
+        "life_span": "9-15 years"
+      },
+      {
+        "breed": "American Shorthair",
+        "description": "American Shorthairs have a versatile coat and come in various colors and patterns. They are adaptable and good-natured.",
+        "intelligence": 3,
+        "friendliness": 9,
+        "origin": "United States",
+        "weight": "8-15 pounds",
+        "life_span": "15-20 years"
+      },
+      {
+        "breed": "Manx",
+        "description": "Manx cats are recognized by their taillessness or short tails. They are known for their playful and social nature.",
+        "intelligence": 3,
+        "friendliness": 7,
+        "origin": "Isle of Man",
+        "weight": "8-12 pounds",
+        "life_span": "8-14 years"
+      },
+      {
+        "breed": "Siberian",
+        "description": "Siberian cats have a semi-long coat and are well adapted to cold climates. They are affectionate and known to be hypoallergenic.",
+        "intelligence": 4,
+        "friendliness": 9,
+        "origin": "Russia",
+        "weight": "8-20 pounds",
+        "life_span": "12-15 years"
+      },
+      {
+        "breed": "Oriental",
+        "description": "Oriental cats are closely related to Siamese cats and share their elegant body shape and striking coat colors.",
+        "intelligence": 4,
+        "friendliness": 9,
+        "origin": "United States",
+        "weight": "6-12 pounds",
+        "life_span": "12-18 years"
+      },
+      {
+        "breed": "Devon Rex",
+        "description": "Devon Rex cats have a curly coat, large ears, and a mischievous expression. They are active and affectionate companions.",
+        "intelligence": 4,
+        "friendliness": 8,
+        "origin": "United Kingdom",
+        "weight": "5-10 pounds",
+        "life_span": "9-15 years"
+      },
+      {
+        "breed": "Turkish Van",
+        "description": "Turkish Van cats are known for their love of water and distinctive color pattern on their coat. They are energetic and playful.",
+        "intelligence": 3,
+        "friendliness": 7,
+        "origin": "Turkey",
+        "weight": "7-20 pounds",
+        "life_span": "12-17 years"
+      }
+    ]

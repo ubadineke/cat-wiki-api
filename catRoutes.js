@@ -8,6 +8,10 @@ router
     .post(catController.createCat)
 
 router
+    .route('/:id')
+    .delete(catController.deleteCat)
+
+router
     .route('/:breed')
     .get(catController.searchCat)
 
