@@ -20,6 +20,11 @@ const catSchema = new mongoose.Schema({
     },
     life_span:{
         type:String
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now(),
+        select:false
     }
 })
 

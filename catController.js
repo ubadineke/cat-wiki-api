@@ -18,6 +18,8 @@ exports.getAllCats = async (req, res) => {
     }
 };
 
+
+
 exports.createCat = async (req, res) => {
     try{
         const newCat = await Cat.create(req.body)
@@ -52,12 +54,75 @@ exports.deleteById = async(req, res) => {
     }
 }
 
+
+
 exports.deleteByBreed = async(req, res) => {
     try{
-    await Cat.findOneAndDelete(req.params.id)
+   await Cat.findOneAndDelete({ breed: `${req.params.breed}` })
         res.status(200).json({
             status:'success',
             data: null
+        })
+    } catch (err){
+        console.log(req.params)
+        res.status(404).json({
+            status:'fail',
+            message: err
+        })
+    }
+}
+
+exports.getByBreed = async (req, res) => {
+    try{
+      const cat = await Cat.find({ breed: `${req.params.breed}` })
+      console.log(req.params)
+    res.status(200).json({
+            status:'success',
+            data:{
+                cat
+            }
+        })
+    } catch (err) {
+        res.status(404).json({
+            status:'fail',
+            message:err
+        })
+    }
+    
+};
+
+
+exports.getById = async (req, res) => {
+    try{
+      const cat = await Cat.findById(req.params.id)
+
+    res.status(200).json({
+            status:'success',
+            data:{
+                cat
+            }
+        })
+    } catch (err) {
+        console.log(req.params)
+        res.status(404).json({
+            status:'fail',
+            message:err
+        })
+    }
+   
+};
+
+exports.updateById =  async (req, res) => {
+    try{
+        const cat = await Cat.findByIdAndUpdate(req.params.id, req.body, {
+            new: true,
+            runValidators: true
+        })
+        res.status(200).json({
+            status:'success',
+            data:{
+                cat
+            }
         })
     } catch (err){
         res.status(404).json({
@@ -67,48 +132,9 @@ exports.deleteByBreed = async(req, res) => {
     }
 }
 
-
-exports.getByBreed = async (req, res) => {
+exports.updateByBreed =  async (req, res) => {
     try{
-      const cat = await Cat.find({ breed: `${req.params.breed}` })
-    res.status(200).json({
-            status:'success',
-            data:{
-                cat
-            }
-        })
-    } catch (err) {
-        res.status(404).json({
-            status:'fail',
-            message:err
-        })
-    }
-
-    
-};
-
-exports.getById = async (req, res) => {
-    try{
-      const cat = await Cat.findById(req.params.id)
-    res.status(200).json({
-            status:'success',
-            data:{
-                cat
-            }
-        })
-    } catch (err) {
-        res.status(404).json({
-            status:'fail',
-            message:err
-        })
-    }
-
-    
-};
-
-exports.updateById =  async (req, res) => {
-    try{
-        const cat = await Cat.findByIdAndUpdate(req.params.id, req.body, {
+        const cat = await Cat.findOneAndUpdate({ breed: req.params.breed }, req.body, {
             new: true,
             runValidators: true
         })

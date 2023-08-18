@@ -6,17 +6,18 @@ router
     .route('/')
     .get(catController.getAllCats)
     .post(catController.createCat)
-
+    .delete(catController.deleteByBreed)
+    
 router
     .route('/:id')
     .get(catController.getById)
     .delete(catController.deleteById)
     .patch(catController.updateById)
-
 router
-    .route('/:breed')
+    .route('/breed/:breed')
     .get(catController.getByBreed)
     .delete(catController.deleteByBreed)
+    .patch(catController.updateByBreed)
 
 router
     .route('/topfriendly')
