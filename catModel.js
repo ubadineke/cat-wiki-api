@@ -6,10 +6,13 @@ const catSchema = new mongoose.Schema({
         unique: true,
         trim: true
     },
+    description:{
+        type: String
+    },
     intelligence:{
         type: Number
     },
-    top_friendly:{
+    friendliness:{
         type: Number
     },
     origin:{

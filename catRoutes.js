@@ -8,11 +8,11 @@ router
     .post(catController.createCat)
     .delete(catController.deleteByBreed)
     
-router
-    .route('/:id')
-    .get(catController.getById)
-    .delete(catController.deleteById)
-    .patch(catController.updateById)
+// router
+//     .route('/:id')
+//     .get(catController.getById)
+//     .delete(catController.deleteById)
+//     .patch(catController.updateById)
 router
     .route('/breed/:breed')
     .get(catController.getByBreed)
