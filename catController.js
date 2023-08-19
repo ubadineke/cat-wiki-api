@@ -39,6 +39,7 @@ exports.createCat = async (req, res) => {
     
 };
 
+//DELETE CAT DATA
 exports.deleteById = async(req, res) => {
     try{
     await Cat.findByIdAndDelete(req.params.id)
