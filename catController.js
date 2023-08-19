@@ -73,6 +73,8 @@ exports.deleteByBreed = async(req, res) => {
     }
 }
 
+//GET SINGLE CAT DATA
+
 exports.getByBreed = async (req, res) => {
     try{
       const cat = await Cat.find({ breed: `${req.params.breed}` })
