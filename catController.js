@@ -19,8 +19,7 @@ exports.getAllCats = async (req, res) => {
     }
 };
 
-
-
+//CREATE NEW CAT ENTRY
 exports.createCat = async (req, res) => {
     try{
         const newCat = await Cat.create(req.body)
