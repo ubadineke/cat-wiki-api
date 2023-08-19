@@ -1,5 +1,6 @@
 const Cat = require('./catModel.js')
 
+//GET ALL CAT DATA
 exports.getAllCats = async (req, res) => {
     try{
     const cats = await Cat.find()
