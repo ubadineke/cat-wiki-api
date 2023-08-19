@@ -8,11 +8,7 @@ router
     .post(catController.createCat)
     .delete(catController.deleteByBreed)
     
-// router
-//     .route('/:id')
-//     .get(catController.getById)
-//     .delete(catController.deleteById)
-//     .patch(catController.updateById)
+    
 router
     .route('/breed/:breed')
     .get(catController.getByBreed)
@@ -27,5 +23,10 @@ router
     .route('/mostintelligent')
     .get(catController.mostintelligent)
 
+router
+.route('/:id')
+.get(catController.getById)
+.delete(catController.deleteById)
+.patch(catController.updateById)
 
 module.exports = router;
