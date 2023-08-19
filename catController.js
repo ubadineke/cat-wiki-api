@@ -155,8 +155,6 @@ exports.updateByBreed =  async (req, res) => {
 exports.topfriendly = async (req, res) => {
     try{
     const cats = await Cat.find().sort('-friendliness').select('-intelligence -weight -life_span')
-    //const cats =  await query
-    console.log(cats)
         res.status(200).json({
             status:'success',
             data:{
@@ -172,9 +170,20 @@ exports.topfriendly = async (req, res) => {
     
 };
 
-exports.mostintelligent = (req, res) => {
-    res.status(500).json({
-        status:'error',
-        message:'This route is not yet defined'
-    })
+exports.mostintelligent = async (req, res) => {
+    try{
+        const cats = await Cat.find().sort('-intelligence').select('-friendliness -weight -life_span')
+            res.status(200).json({
+                status:'success',
+                data:{
+                    cats
+                }
+            })
+        } catch (err) {
+            res.status(404).json({
+                status:'fail',
+                message: err
+            })
+        }
+        
 };
