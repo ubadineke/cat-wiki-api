@@ -115,6 +115,7 @@ exports.getById = async (req, res) => {
    
 };
 
+//UPDATE EXISTING DATA
 exports.updateById =  async (req, res) => {
     try{
         const cat = await Cat.findByIdAndUpdate(req.params.id, req.body, {
